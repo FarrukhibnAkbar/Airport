@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Airport</title>
+	<style type="text/css">
+		table{
+			border-collapse: collapse;
+		}
+		th,td{
+			border: 2px solid black;
+			padding: 1rem;
+		}
+		tbody tr:nth-child(even){
+			background: orange;
+		}
+	</style>
+</head>
+<body>
+	
+	<h1>Airport</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Qayerdan</th>
+				<th>Qayerga</th>
+				<th>Uchish vaqti</th>
+				<th>Qo'nish vaqti</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{ range. }}
+			 	<tr>
+					<td>{{ .FlyId }}</td>
+					<td>{{ .FromWhere }}</td>
+					<td>{{ .ToWhere }}</td>
+					<td>{{ .FlyTime }}</td>
+					<td>{{ .LnadingTime }} </td>	
+				</tr>
+			{{ end }}
+
+		</tbody>
+	</table>
+
+
+
+</body>
+</html>
